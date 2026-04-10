@@ -52,7 +52,7 @@ export default function AreaGrid() {
               key={area.slug}
               initial={{ opacity: 0, scale: 0.95 }}
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
-              transition={{ duration: 0.45, delay: i * 0.09, ease: [0.25, 1, 0.5, 1] }}
+              transition={{ duration: 0.45, delay: i * 0.09, ease: [0.25, 1, 0.5, 1] as const }}
               whileHover={{ y: -4, transition: { duration: 0.2 } }}
             >
               <Link

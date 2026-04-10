@@ -24,7 +24,7 @@ function FaqCard({ item, index, tinted }: { item: FaqItem; index: number; tinted
       ref={ref}
       initial={{ opacity: 0, y: 20 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.5, delay: index * 0.07, ease: [0.25, 1, 0.5, 1] }}
+      transition={{ duration: 0.5, delay: index * 0.07, ease: [0.25, 1, 0.5, 1] as const }}
     >
       <motion.div
         animate={{
@@ -69,7 +69,7 @@ function FaqCard({ item, index, tinted }: { item: FaqItem; index: number; tinted
           </span>
           <motion.span
             animate={{ rotate: open ? 180 : 0 }}
-            transition={{ duration: 0.25, ease: [0.25, 1, 0.5, 1] }}
+            transition={{ duration: 0.25, ease: [0.25, 1, 0.5, 1] as const }}
             style={{ color: "#c8732a", flexShrink: 0 }}
           >
             <ChevronDown size={18} />
@@ -82,7 +82,7 @@ function FaqCard({ item, index, tinted }: { item: FaqItem; index: number; tinted
               initial={{ height: 0, opacity: 0 }}
               animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
-              transition={{ duration: 0.3, ease: [0.25, 1, 0.5, 1] }}
+              transition={{ duration: 0.3, ease: [0.25, 1, 0.5, 1] as const }}
               style={{ overflow: "hidden" }}
             >
               <div

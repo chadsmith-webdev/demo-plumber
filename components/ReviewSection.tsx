@@ -80,7 +80,7 @@ export default function ReviewSection() {
               key={i}
               initial={{ opacity: 0, y: 24 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: i * 0.1, ease: [0.25, 1, 0.5, 1] }}
+              transition={{ duration: 0.5, delay: i * 0.1, ease: [0.25, 1, 0.5, 1] as const }}
               whileHover={{ y: -4, transition: { duration: 0.2 } }}
               style={{
                 background: "#1a2235",

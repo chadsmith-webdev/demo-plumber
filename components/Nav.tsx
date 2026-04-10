@@ -204,7 +204,7 @@ export default function Nav() {
                       initial={{ opacity: 0, y: 8, scale: 0.96 }}
                       animate={{ opacity: 1, y: 0, scale: 1 }}
                       exit={{ opacity: 0, y: 8, scale: 0.96 }}
-                      transition={{ duration: 0.18, ease: [0.25, 1, 0.5, 1] }}
+                      transition={{ duration: 0.18, ease: [0.25, 1, 0.5, 1] as const }}
                       style={{
                         position: "absolute",
                         top: "calc(100% + 8px)",
@@ -289,7 +289,7 @@ export default function Nav() {
             initial={{ opacity: 0, x: "100%" }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "100%" }}
-            transition={{ duration: 0.3, ease: [0.25, 1, 0.5, 1] }}
+            transition={{ duration: 0.3, ease: [0.25, 1, 0.5, 1] as const }}
             style={{
               position: "fixed",
               inset: 0,
